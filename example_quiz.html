@@ -50,12 +50,13 @@
           <div class="word">
             <span class="popup_window">
               <p class="romaji">watashi</p>
-              <p>わたし</p>
-              <p>I</p>
+              <p>わたし</p> <!--May add a class here for the hiragana spelling of a word-->
+              <p>I</p> <!--May add a class here for the English definition of the word-->
             </span>
             <span class="actual_word">私</span>
           </div>
 
+          <!--The input form will be in every sentence and only takes input from the digital keyboard-->
           <span id="particle_wrap"><input type="text" id="particle_input" readonly></span>
 
           <div class="word">
@@ -72,6 +73,7 @@
 
       </div>
 
+      <!--Digital Keyboard with particles for the user-->
       <div class="particle_container">
         <div class="particle_digital_keyboard">
           <button onclick="add_particle('は')"><span class="particle_digital_keyboard">は</span></button>
