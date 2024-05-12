@@ -1,0 +1,258 @@
+/* Non-Class CSS */
+html {
+  background-color: rgb(46, 46, 46);
+  font-family: arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* Header CSS */
+.main_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.main_header img {
+  width: 120px;
+  height: 120px;
+  margin: 20px;
+}
+
+.main_header h1 {
+  padding-top: 30px;
+}
+
+@media (max-width: 500px) {
+  .main_header h1 {
+    padding-top: 20px;
+  }
+}
+
+
+/* Container CSS */
+.container {
+  background-color: white;
+  padding: 20px;
+  border: 4px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 800px;
+  height: 100%;
+}
+
+.container p {
+  margin: 0;
+  max-width: 700px;
+}
+
+@media (max-width: 900px) {
+  .container {
+    width: auto;
+  }
+}
+
+
+/* Navigation Bar CSS */
+.navbar {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(230, 230, 230);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.navbar a {
+  text-decoration: none;
+  justify-content: center;
+  color: black;
+  border: 2px solid black;
+  border-top: none;
+  border-bottom: 4px solid black;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-weight: bold;
+  font-size: large;
+  display: flex;
+  flex-grow: 1;
+}
+
+.navbar a:hover {
+  background-color: rgb(200, 200, 200);
+}
+
+.navbar a:active {
+  background-color: rgb(180, 180, 180);
+}
+
+.navbar a:first-child {
+  border-left: none;
+}
+
+.navbar a:last-child {
+  border-right: none;
+}
+
+/* Had to change this to 600px as the 500px in the rubric didn't reflect my changes unless
+    I made the window stupidly small */
+@media (max-width: 600px) {
+  .main_header {
+    padding-top: 150px;
+  }
+
+  .main_header h1 {
+    padding-top: 5px;
+  } 
+
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar a {
+    border-left: none;
+    border-right: none;
+  }
+}
+
+/* Lives and Score CSS */
+.lives_and_score {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+.lives_and_score p {
+  font-size: 20px;
+}
+
+.lives {
+  padding-left: 200px;
+}
+
+.score {
+  padding-right: 200px;
+}
+
+@media (max-width: 900px) {
+  .lives {
+    padding-left: 100px;
+  }
+
+  .score {
+    padding-right: 100px;
+  }
+}
+
+/* Japanese Sentence CSS */
+.japanese_sentence_container {
+  padding: 20px;
+}
+
+.japanese_sentence {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border: 2px solid black;
+  background-color: rgb(235, 235, 235);
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+#particle_input {
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  text-align: center;
+}
+#particle_input:focus {
+  outline: none;
+}
+
+#particle_wrap {
+  padding: 0 5px;
+}
+
+.word {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup_window {
+  position: absolute;
+  background-color: rgb(0, 0, 0, 0.9);
+  padding: 10px 15px;
+  border-radius: 5px;
+  visibility: hidden;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+}
+
+.popup_window p {
+  text-align: center;
+  color: white;
+}
+
+.popup_window::before {
+  content: "";
+  position: absolute;
+}
+
+.word:hover {
+  border-bottom: 1px dashed black;
+}
+
+.word:hover .popup_window {
+  visibility: visible;
+}
+
+.romaji {
+  font-size: 11px;
+}
+
+/* Feedback (Right or wrong answer) CSS */
+#feedback {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 24px;
+}
+
+
+/* Particle Keyboard CSS */
+.particle_container {
+  padding: 35px;
+  padding-top: 15px;
+}
+
+.particle_digital_keyboard {
+  font-size: 24px;
+}
+
+/* Answer streak text CSS */
+#answer_streak {
+  padding-bottom: 20px;
+  font-size: 24px;
+  color: green;
+  display: none;
+}

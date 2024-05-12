@@ -1,0 +1,8 @@
+#ignore all json files
+config.json
+package.json
+package-lock.json
+
+#ignore node-modules and data_files directories
+node_modules/
+data_files/
